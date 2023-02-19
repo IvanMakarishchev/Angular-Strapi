@@ -1,1 +1,19 @@
-<p>slider works!</p>
+<section class="slider-wrapper" (mousemove)="mousePosition($event)">
+  <section class="slider-container" [ngStyle]="{left: mousePos[0], top: mousePos[1]}">
+    <section class="gradient-1"></section>
+    <section class="gradient-2"></section>
+    <section class="gradient-3"></section>
+    <section class="gradient-4"></section>
+    <section class="blured"></section>
+  </section>
+  <section class="slider-content container">
+    <section class="slider-text">
+      <h1 class="slider-title">
+        Hello, world!
+      </h1>
+      <h3 class="slider-subtitle">
+        Lorem ipsum dolor sit amet consecttetur adipiscing elit.
+      </h3>
+    </section>
+  </section>
+</section>

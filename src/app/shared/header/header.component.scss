@@ -1,18 +1,45 @@
-.nav-button {
+.header {
+  position: absolute;
+  z-index: 2;
+}
+
+.header_nav-button {
   padding: 1rem;
   text-decoration: none;
-  margin-top: 10px;
   display: inline-block;
   background-color: #e8e8e8;
   color: #3d3d3d;
   border-radius: 4px;
 }
 
-.nav-button:hover {
+.header_nav-button:hover {
   color: white;
   background-color: #42545C;
   cursor: pointer;
 }
-.nav-button:active {
+
+.header_nav-button:active {
   background-color: black;
+}
+
+.header_logo {
+  width: 40px;
+  height: 40px;
+  background-image: url('../../../assets/logo.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav_wrapper {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
