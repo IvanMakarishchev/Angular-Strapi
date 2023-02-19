@@ -1,0 +1,5 @@
+<div *ngFor="let action of actions$ | async">
+  <p>{{ action.attributes.Title }}</p>
+  <img [src]="action.attributes.Thumbnail.data.attributes.url">
+  <p>{{ action.attributes.Description }}</p>
+</div>
