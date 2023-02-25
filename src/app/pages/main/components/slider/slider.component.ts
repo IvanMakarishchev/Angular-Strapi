@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  mousePos = [`0`, `0`];
+  mousePos = [`-83vw`, `-100vw`];
 
   constructor() {}
 
   ngOnInit(): void {}
 
   mousePosition(e: MouseEvent) {
-    this.mousePos = [`calc(${e.screenX}px - 40vw)`, `calc(${e.screenY}px - 50vw)`];
+    this.mousePos = [`calc(${e.screenX}px - 132vw)`, `calc(${e.screenY}px - 138vw)`];
   }
 
   getMousePosition () {

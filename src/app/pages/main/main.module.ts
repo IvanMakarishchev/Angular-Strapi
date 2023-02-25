@@ -6,6 +6,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { RecentActionsComponent } from './components/recent-actions/recent-actions.component';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
+import { TopSliderComponent } from './components/top-slider/top-slider.component';
 
 
 
@@ -13,7 +14,8 @@ import { MainRoutingModule } from './main-routing.module';
   declarations: [
     MainComponent,
     SliderComponent,
-    RecentActionsComponent
+    RecentActionsComponent,
+    TopSliderComponent
   ],
   imports: [
     CommonModule,

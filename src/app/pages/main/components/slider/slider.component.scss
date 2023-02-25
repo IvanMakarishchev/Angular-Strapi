@@ -12,7 +12,7 @@
   position: absolute;
   width: 100vw;
   height: 100vw;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .gradient-1,
@@ -20,62 +20,83 @@
 .gradient-3,
 .gradient-4 {
   position: absolute;
-  width: 160%;
-  height: 200%;
-  left: -40%;
-  top: -50%;
+  width: 120%;
+  height: 150%;
+  left: 70%;
+  top: 60%;
   border-radius: 50%;
-  filter: blur(15vW);
   animation-iteration-count: infinite;
   animation-name: gradientAnimation;
-  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(.56,-0.35,.5,.99);
 }
 
 .gradient-1 {
-  background: linear-gradient(110deg, #014871 40%, #a0ebd000 60%);
-  animation-duration: 10s;
+  background: linear-gradient(110deg, #007fc9 50%, #15ffa900 50%);
+  animation-duration: 20s;
 }
 
 .gradient-2 {
-  background: linear-gradient(160deg, #afc04d 40%, #e472b000 60%);
-  animation-duration: 13s;
+  background: linear-gradient(160deg, #e5ff54 50%, #ff3fa900 50%);
+  animation-duration: 30s;
   animation-direction: alternate-reverse;
 }
 
 .gradient-3 {
-  background: linear-gradient(20deg, #eb6553 40%, #d3a0eb00 60%);
-  animation-duration: 8s;
+  background: linear-gradient(20deg, #ff3015 50%, #b617ff00 50%);
+  animation-duration: 15s;
   animation-direction: alternate-reverse;
 }
 
 .gradient-4 {
-  background: linear-gradient(270deg, #ca6be7 40%, #f1e97000 60%);
-  animation-duration: 7s;
+  background: linear-gradient(270deg, #ce2eff 50%, #f1e97000 50%);
+  animation-duration: 10s;
 }
 
 @keyframes gradientAnimation {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translate(0%, 0%);
+    filter: blur(10vw);
+    opacity: 50%;
+  }
+  25% {
+    transform: rotate(270deg) translate(20%, -10%);
+    filter: blur(20vw);
+    opacity: 0.5;
   }
   50% {
-    transform: rotate(18deg);
+    transform: rotate(-90deg) translate(0%, 0%);
+    filter: blur(10vw);
+    opacity: random($limit: 1);
+  }
+  75% {
+    transform: rotate(180deg) translate(-10%, 20%);
+    filter: blur(20vw);
+    opacity: random($limit: 1);
   }
   100% {
-    transform: rotate(359deg);
+    transform: rotate(360deg) translate(0%, 0%);
+    filter: blur(10vw);
+    opacity: 0.5;
   }
 }
 
 .blured {
   position: absolute;
-  width: 75%;
-  height: 75%;
+  width: 60vw;
+  height: 60vw;
   border: 100vw solid white;
   box-sizing: content-box;
-  left: -100vw;
-  top: -100vw;
   border-radius: 50%;
   filter: blur(10vw);
   z-index: 1;
+  transition: 1s;
+}
+
+.blured-top {
+  filter: blur(6vw);
+  opacity: 80%;
+  z-index: 1;
+  transition: 3s;
 }
 
 .slider-content {

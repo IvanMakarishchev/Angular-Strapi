@@ -1,0 +1,9 @@
+<div class="wrapper top-slider" #top_slider>
+  <div *ngFor="let rows of trianglesArray; index as rI" class="dots-row">
+    <div
+      *ngFor="let triangle of rows; index as cI"
+      class="poly"
+      [ngStyle]="{clipPath: 'polygon(' + triangle + ')'}"
+    ></div>
+  </div>
+</div>
